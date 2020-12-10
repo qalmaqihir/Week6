@@ -1,6 +1,7 @@
-package Shape;
+package AbstracShapes;
 
-public class Square extends Rectangle{
+
+class Square extends Rectangle {
 
     public Square() {
     }
@@ -22,6 +23,15 @@ public class Square extends Rectangle{
         super.setWidth(side);
 
     }
+    @Override
+    public void setWidth(double side){
+        super.setWidth(side);
+    }
+    @Override
+    public void setLength(double side){
+        super.setLength(side);
+    }
+
     @Override
     public String toString(){
         return String.format("Square[%s]",super.toString());

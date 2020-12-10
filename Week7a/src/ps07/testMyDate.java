@@ -26,8 +26,8 @@ public class testMyDate {
 //        MyDate d3 = new MyDate(2012, 2, 28);
 //        System.out.println(d3);
 //        System.out.println(d3.previousYear());  // Monday 28 Feb 2011
-//
-// MyDate d4 = new MyDate(2099, 11, 31); // Invalid year, month, or day!
+
+ //MyDate d4 = new MyDate(2099, 11, 31); // Invalid year, month, or day!
 // MyDate d5 = new MyDate(2011, 2, 29);  // Invalid year, month, or day!
     }
 }
