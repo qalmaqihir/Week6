@@ -58,15 +58,15 @@ public class MyDate {
         setDate(year, month,day);
     }
     public void setDate(int year, int month, int day){
-        if(!(isValidDate(year,month,day))){
-            throw new IllegalArgumentException("Invalid year, month, or day!");
-        }else
-        {
+//        if(!(isValidDate(year,month,day))){
+//            throw new IllegalArgumentException("Invalid year, month, or day!");
+//        }else
+//        {
             this.year=year;
             this.month=month;
             this.day=day;
-        }
-
+//        }
+//
     }
 
     public int getYear() {
@@ -97,6 +97,9 @@ public class MyDate {
         }
     }
 
+//    public void setDay(int day){
+//        this.day=day;
+//    }
     public void setDay(int day) {
         int dayMax;
         //checking month
@@ -138,7 +141,7 @@ public class MyDate {
                     MyDate newDate=new MyDate(this.year,this.month,this.day);
                     return newDate;
                 }else{
-                    if(isLeapYear(year)){
+                    if(isLeapYear(year)&&month==2){
                         setDay(29);
                         MyDate newDate=new MyDate(this.year,this.month,this.day);
                         return newDate;

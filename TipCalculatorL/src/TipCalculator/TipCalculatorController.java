@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 
-class TipCalculatorController {
+public class TipCalculatorController {
     private static final NumberFormat currency = NumberFormat.getCurrencyInstance();
     private static final NumberFormat percent=NumberFormat.getPercentInstance();
     private BigDecimal tipPercentage = new BigDecimal(0.15);//default value
