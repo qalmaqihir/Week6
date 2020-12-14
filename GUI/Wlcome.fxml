@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="31.0" prefWidth="398.0" text="Welcome to JavaFX" textFill="#24ab41">
+         <font>
+            <Font name="Karumbi Regular" size="52.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="8.0" />
+         </VBox.margin>
+      </Label>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/Image/bug.png" />
+         </image>
+      </ImageView>
+   </children>
+</VBox>
