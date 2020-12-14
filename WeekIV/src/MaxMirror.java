@@ -1,0 +1,73 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MaxMirror {
+    /*
+    We'll say that a "mirror" section in an array is a group of contiguous elements such that
+     somewhere in the array, the same group appears in reverse order.
+      For example, the largest mirror section in {1, 2, 3, 8, 9, 3, 2, 1} is length 3 (the {1, 2, 3} part).
+      Implement a Java static method maxMirror() that returns the size of the largest mirror section
+      found in the given array. The inputs size <= 100.
+
+maxMirror ( [ 1, 2, 3, 8, 9, 3, 2, 1] ) → 3
+maxMirror ( [ 7, 1, 2, 9, 7, 2, 1 ] ) → 2
+     */
+    public static void main(String[] args) {
+        Scanner src = new Scanner(System.in);
+        String given=src.nextLine();
+        String trimed= given.trim();
+//        System.out.println(trimed);
+        String[] strArray=trimed.split(" ");
+        String array="";
+        for (String s: strArray) {
+            if(!isInteger(s)){
+                System.out.println("input error");
+            }else{
+                array+=s;
+            }
+        }
+        System.out.println(maxMirror(strArray));
+//            System.out.println(Arrays.toString(strArray));
+//            System.out.println(array);
+
+    }
+    public static int maxMirror(String[] strArray){
+        int total=0;
+        String arr1="";
+        String arr2="";
+        int ARRAY_LENGTH=strArray.length;
+
+        //First in straight order and then in reverse order;;;;
+        for (int i = 0 ; i < strArray.length; i++) {
+            arr1+=strArray[i];
+            arr2+=strArray[ARRAY_LENGTH-1];
+            ARRAY_LENGTH--;
+        }
+        for (int i = 0;i<strArray.length;i++ ){
+            if(arr1.charAt(i)==arr2.charAt(i)){
+                arr1=arr1.replace(arr1.charAt(i),'x');
+                total+=1;
+               // System.out.printf("%s == %s ",arr1.charAt(i),arr2.charAt(i));
+            }else{
+                ;//System.out.printf("%s != %s ",arr1.charAt(i),arr2.charAt(i));
+            }
+        }
+//        System.out.println(arr1);
+//        System.out.println(arr2);
+        return total;
+    }
+
+    public static boolean isInteger(String s) {
+        try {
+//            Integer.parseInt(s);
+            Integer.parseUnsignedInt(s);
+        } catch(NumberFormatException e) {
+            return false;
+        } catch(NullPointerException e) {
+            return false;
+        }
+        // only got here if we didn't return false
+        return true;
+    }
+
+}
